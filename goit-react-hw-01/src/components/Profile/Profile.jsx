@@ -1,30 +1,33 @@
-import "./Profile.module.css";
+import styles from './Profile.module.css';
 
 const Profile = (prop) => {
   return (
-    <div className="profile-wrap">
-        <div>
-            <img
+    <div className={styles.profileWrap}>
+          <div>
+              
+                  <img className={styles.profileImage}
                 src={prop.image}
                 alt="User avatar"
             />
-            <p>{prop.name}</p>
-            <p>@{prop.tag}</p>
-            <p>{prop.location}</p>
+              
+            
+            <p className={styles.profileName}>{prop.name}</p>
+            <p className={styles.profileTag}>@{prop.tag}</p>
+            <p className={styles.profileTag}>{prop.location}</p>
         </div>
 
-        <ul>
-            <li>
+        <ul className={styles.profileList}>
+            <li className={styles.profileItem}>
                 <span>Followers</span>
-                <span>{prop.stats.followers}</span>
+                <span className={styles.profileBold}>{prop.stats.followers}</span>
             </li>
-            <li>
+            <li className={styles.profileItem}>
                 <span>Views</span>
-                <span>{prop.stats.views}</span>
+                <span className={styles.profileBold}>{prop.stats.views}</span>
             </li>
-            <li>
+            <li className={styles.profileItem}>
                 <span>Likes</span>
-                <span>{prop.stats.likes}</span>
+                <span className={styles.profileBold}>{prop.stats.likes}</span>
             </li>
         </ul>
     </div>
