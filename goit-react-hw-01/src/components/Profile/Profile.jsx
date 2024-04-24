@@ -1,6 +1,8 @@
+import "./Profile.module.css";
+
 const Profile = (prop) => {
   return (
-    <div>
+    <div className="profile-wrap">
         <div>
             <img
                 src={prop.image}
