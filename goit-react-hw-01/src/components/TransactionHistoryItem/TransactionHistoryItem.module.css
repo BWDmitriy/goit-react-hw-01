@@ -1,9 +1,12 @@
-.transactionHistory {
-  border: 1px solid black;
-  margin: 0 auto;
-  width: 100%;
+td {
+  border: 1px black solid;
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
 }
-th {
-  background: #00bcd5;
-  padding: 20px 0;
+tr:nth-child(even) {
+  background-color: #d3d3d3;
+}
+.transactionType::first-letter {
+  text-transform: uppercase;
 }
