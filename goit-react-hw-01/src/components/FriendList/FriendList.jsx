@@ -1,16 +1,12 @@
 import FriendListItem from "./FriendListItem";
-import friends from ".../friends.json"
-    
-const FriendList = (props) => {
+import styles from './Friends.module.css'
+
+const FriendList = ({friends}) => {
   return (
+      <ul className={styles.friendsList}>
+      {friends.map((friend) => <FriendListItem avatar={friend.avatar} name={friend.name} key={friend.id} isOnline={friend.isOnline}/>)}
+    </ul>
+  );
+};
 
-      console.log(friends)
-        //       <ul>
-		// 	{props.map((prop) => {
-        //         return <li key={prop.id}><FriendListItem name={prop.name} avatar={prop.avatar} status={prop.status} />{children}</li>;
-		// 	})}
-		// </ul>
-);
-}
-
-export default FriendList;
+export default FriendList
